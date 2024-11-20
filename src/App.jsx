@@ -13,7 +13,8 @@ function App() {
   useEffect(() => {
     const fetchMovies = async () => {
       dispatch({ type: ACTIONS.FETCH_START });
-      const API_KEY = process.env.OMDB_API_KEY;
+      const API_KEY = import.meta.env.VITE_OMDB_API_KEY;
+      // process.env.OMDB_API_KEY;
       try {
         const response = await axios.get(
           `http://www.omdbapi.com/?apikey=${API_KEY}&s=${querry}`

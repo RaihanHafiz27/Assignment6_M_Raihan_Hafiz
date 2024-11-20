@@ -2,7 +2,7 @@ export const initialState = {
   movies: [],
   loading: false,
   error: null,
-  isDarkMode: false,
+  isDarkMode: true,
 };
 
 export const ACTIONS = {
